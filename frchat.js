@@ -8,7 +8,7 @@ var fileStoreOptions = {};
 var sessionOptions = {
   store: new FileStore(fileStoreOptions),
   secret: Date.now() * Date.now() + Date.now().toString(),
-  cookie: { secure: true },
+  cookie: { secure: true, maxAge: 604800000 },
   resave: false,
   saveUninitialized: true,
 };

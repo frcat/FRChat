@@ -1,6 +1,7 @@
 {
   "dependencies": {
     "@picocss/pico": "^1.5.6",
+    "bcrypt": "^5.1.0",
     "body-parser": "^1.20.1",
     "cache-require-paths": "^0.3.0",
     "compression": "^1.7.4",
@@ -8,7 +9,8 @@
     "express-rate-limit": "^6.6.0",
     "express-session": "^1.17.3",
     "feather-icons": "^4.29.0",
-    "session-file-store": "^1.5.0"
+    "session-file-store": "^1.5.0",
+    "simple-json-db": "^2.0.0"
   },
   "name": "frchat",
   "description": "",
