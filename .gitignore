@@ -1,0 +1,6 @@
+node_modules/
+package_lock.json
+test.js
+.cache-require-paths.json
+sessions/
+db/
