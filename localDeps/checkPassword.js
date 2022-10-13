@@ -70,10 +70,7 @@ const passwordStrength = (password, options = defaultOptions, allowedSymbols="!\
   
     Object.assign(strength, fulfilledOptions[0])
   
-    if (strength.value == "strong" && strength.contains.length == 4 && strength.length > 9) {
-        return true;
-    } else {
-        return false;
-    }
+    return strength.contains.length == 4 && strength.length > 9 && strength.id == 3 && strength.value == "Strong"
   };
-  
+
+global.passwordStrength = passwordStrength
