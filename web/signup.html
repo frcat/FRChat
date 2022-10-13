@@ -5,15 +5,16 @@
             <h1>Signup</h1>
             <h2>Start your adventure with FRChat</h2>
         </hgroup>
-        <form>
-            <input type="text" name="login" placeholder="Login" aria-label="Login" autocomplete="nickname" required>
+        <form id="form">
+            <input type="text" name="username" placeholder="Username" aria-label="Username" autocomplete="nickname" required>
             <input type="password" name="password" placeholder="Password" aria-label="Password"
                 autocomplete="current-password" required>
                 <fieldset>
-                    <p data-tooltip="Password must contain Lowercase, Uppercase, Symbols, and Numbers as well as be 10 characters long">Enter a nice and secure password</p>
+                    <p data-tooltip="Lowercase, Uppercase, Symbols, Numbers, 10+ characters" id="err">Enter a nice and secure password</p>
                   </fieldset>
-            <button type="submit" class="contrast" onclick="event.preventDefault()">Create Account</button>
+            <button type="submit" class="contrast">Create Account</button>
         </form>
     </div>
     <div></div>
 </article>
+<script src="../js/signup.js"></script>

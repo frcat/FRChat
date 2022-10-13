@@ -1,6 +1,5 @@
+module.exports = function (db) {
 const bcrypt = require("bcrypt")
-const JSONdb = require('simple-json-db');
-const db = new JSONdb('db/users.json', { jsonSpaces: 0 });
 
 global.hashPassword = function (username, password) {
     bcrypt.hash(password, 10, function (err, hash) {
@@ -29,4 +28,5 @@ global.checkUsername = function (username) {
     } else {
         return false;
     }
+}
 }

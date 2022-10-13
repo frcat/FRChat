@@ -3,14 +3,18 @@
     <div>
         <hgroup>
             <h1>Login</h1>
-            <h2>Conetine your adventure with FRChat</h2>
+            <h2>Continue your adventure with FRChat</h2>
         </hgroup>
-        <form>
-            <input type="text" name="login" placeholder="Login" aria-label="Login" autocomplete="nickname" required>
+        <form id="form">
+            <input type="text" name="username" placeholder="Username" aria-label="Username" autocomplete="nickname" required>
             <input type="password" name="password" placeholder="Password" aria-label="Password"
                 autocomplete="current-password" required>
-            <button type="submit" class="contrast" onclick="event.preventDefault()">Login</button>
+                <fieldset>
+                    <p id="err"></p>
+                  </fieldset>
+            <button type="submit" class="contrast">Login</button>
         </form>
     </div>
     <div></div>
 </article>
+<script src="../js/login.js"></script>
