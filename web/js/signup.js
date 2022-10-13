@@ -10,6 +10,9 @@ document.getElementById("form").onsubmit = function (e) {
   },
   body: JSON.stringify({username: data.get("username"), password: data.get("password")})
 }).then(res => res.text())
-  .then(res => { if (res == "You may now login") return location.href="../login";
-    document.getElementById("err").innerText = res});
+  .then(res => {
+    document.getElementById("err").innerText = res
+    if (res == "You may now login") {
+      location.href="/login"
+    }})
 }

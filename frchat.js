@@ -1,7 +1,7 @@
 
 require('cache-require-paths');
 const JSONdb = require('simple-json-db');
-const db = new JSONdb('db/users.json');
+const db = new JSONdb('user.db', {jsonSpaces: 0});
 require("./localDeps/_.js")(db)
 const express = require('express');
 var session = require('express-session');

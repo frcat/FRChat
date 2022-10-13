@@ -11,5 +11,8 @@ document.getElementById("form").onsubmit = function (e) {
   body: JSON.stringify({username: data.get("username"), password: data.get("password")})
 }).then(res => res.text())
   .then(res => {
-    document.getElementById("err").innerText = res});
+    document.getElementById("err").innerText = res
+  if (res == "All set") {
+    location.href="/app"
+  }});
 }

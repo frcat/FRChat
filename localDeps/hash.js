@@ -1,3 +1,5 @@
+const res = require("express/lib/response");
+
 module.exports = function (db) {
 const bcrypt = require("bcrypt")
 
@@ -12,18 +14,11 @@ global.hashPassword = function (username, password) {
 }
 
 global.checkPassword = function (username, password) {
-    bcrypt.compare(password, db.get(username), function (err, result) {
-        if (err) return false;
-        if (result) {
-            return true;
-        } else {
-            return false;
-        }
-    });
+    return bcrypt.compareSync(password, db.get(username))
 }
 
 global.checkUsername = function (username) {
-    if (!db.has(username)) {
+    if (!db.has(username) && username.length > 0 && username.length < 101) {
         return true
     } else {
         return false;
